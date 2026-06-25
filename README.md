@@ -47,6 +47,10 @@ cd ToDoList
 python todo_app.py
 ```
 
+## Screenshot
+
+![Main Menu](screenshots/main_menu.png)
+
 ## Learning Goals
 
 This project was created to practice:
