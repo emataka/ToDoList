@@ -54,9 +54,9 @@ class Todolist:
     
     def show_tasks(self):
         priority_order = {
-            "High": 3,
-            "Medium": 2, 
-            "Low": 1
+            "high": 3,
+            "medium": 2, 
+            "low": 1
         }
         
         sorted_tasks = sorted(
@@ -65,11 +65,11 @@ class Todolist:
             reverse=True
         )
         
-        print(f"{'ID':<5}{'NAME':<15}{'DESCRIPTION':<25}{'PRIORITY':<10}")
+        print(f"\n{'ID':<5}{'NAME':<15}{'DESCRIPTION':<25}{'PRIORITY':<10}")
         print("-" * 60)
         
         for task in sorted_tasks:
-            print(f"{task.id:<5}{task.name:<15}{task.description:<25}{task.priority:<10}")
+            print(f"{task.id:<5}{task.name:<15}{task.description:<25}{task.priority:<10}\n")
     
     def save_to_json(self):
         result = []
@@ -130,7 +130,7 @@ while True:
     if choice == '1':
         name = input("Enter the name of the task: ")
         description = input("Enter the description: ")
-        priority = input("Enter the priority of the task. It should be in this format -> ['High', 'Medium', 'Low']: ")
+        priority = input("Enter the priority of the task. It should be in this format -> ['high', 'medium', 'low']: ").lower()
         task = Task(name, description, priority)
         print(todolist.add_task(task))
     
