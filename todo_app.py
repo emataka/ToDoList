@@ -130,7 +130,7 @@ while True:
     if choice == '1':
         name = input("Enter the name of the task: ")
         description = input("Enter the description: ")
-        priority = input("Enter the priority of the task: ")
+        priority = input("Enter the priority of the task. It should be in this format -> ['High', 'Medium', 'Low']: ")
         task = Task(name, description, priority)
         print(todolist.add_task(task))
     
